@@ -26,7 +26,6 @@ const Products = () => {
                 quantity: quantity,
             })
                 .then((res) => {
-                console.log(res)
                 setConfirm(false)
             });
         }
