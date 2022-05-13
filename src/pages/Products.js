@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { setInfoProductThunk, setProductThunk } from "../redux/actions"
 import { addProductToCart } from "../services"
 
@@ -60,6 +60,9 @@ const Products = () => {
                  {quantity}
                  <button onClick={increment}>+</button>
                  <button onClick={() => setConfirm(true)}>Add to Cart</button>
+                 <button>
+                     <Link to={"/cart"}>Cart</Link>
+                 </button>
              </div>
              <p>{products.description}</p>
              {products.images?.map((item) => (

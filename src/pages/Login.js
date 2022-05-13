@@ -17,7 +17,6 @@ const Login = () => {
         if (userObj.email) {
             loginUser(userObj)
                 .then((res) => {
-                    console.log(res)
                     localStorage.setItem(`token`, res.access);
                 })
                 .then(() => {
